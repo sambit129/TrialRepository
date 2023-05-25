@@ -1,6 +1,7 @@
 package com.sambit.customerdatamanagement.Service;
 
 import java.time.LocalDateTime;
+import java.util.InputMismatchException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,7 +80,8 @@ public Customer deleteCustomerDataById(int id) {
 	return dao.deleteCustomerDataById(id);
 }
  public List<Customer> getCustomerByName(String name){
-	 return dao.getCustomerByName(name);
+	 throw new InputMismatchException();
+	// return dao.getCustomerByName(name);
 	 
  }
 
